@@ -2,14 +2,24 @@
 import React from 'react';
 import { IconStyle } from './assets/iconfont/iconfont';
 import { GlobalStyle } from './style';
+import { HashRouter } from 'react-router-dom';
+import { renderRoutes } from 'react-router-config';
+import routes from './routes/index';
+import store from './store/index';
+import { Provider } from 'react-redux';
 
-function App () {
+function App() {
   return (
-    <div className="App">
-      <GlobalStyle></GlobalStyle>
-      <IconStyle></IconStyle>
-      <i className="iconfont">&#xe601;</i>
-    </div>
+    <Provider store={store}>
+      <HashRouter>
+        {/* 定义全局样式 */}
+        <GlobalStyle></GlobalStyle>
+        {/* 引入图标 */}
+        <IconStyle></IconStyle>
+        {/* renderRoutes只会渲染第一层数据 */}
+        {renderRoutes(routes)}
+      </HashRouter>
+    </Provider>
   );
 }
 
