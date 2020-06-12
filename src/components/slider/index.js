@@ -42,6 +42,7 @@ function Slider(props) {
                 </div>
                 <div className='swiper-pagination'></div>
             </div>
+            <div className='before'></div>
         </SliderContainer>
     )
 }
