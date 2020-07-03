@@ -18,3 +18,16 @@ export const isEmpty =(value)=>{
     }
     return false
 }
+
+export const getCount =(value)=>{
+    if(value < 0){
+        return;
+    }
+    if(value < 10000){
+        return value;
+    }else if(Math.floor(value / 10000) < 10000){
+        return Math.floor(value/1000)/10 + '万';
+    }else{
+        return Math.floor(value/10000000) /10 + '亿';
+    }
+}
