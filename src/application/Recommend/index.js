@@ -1,13 +1,15 @@
 import React from 'react';
 import Slider from '@/components/slider';
 import RecommendList from '@/components/recommendList/index';
+import { Content } from './style';
+import Scroll from '@/baseUI/scroll';
 
-function Recommend(props){
+function Recommend(props) {
     //mock数据
-    const bannerList = [1,2,3,4].map((item)=>{
+    const bannerList = [1, 2, 3, 4].map((item) => {
         return { imageUrl: "http://p1.music.126.net/ZYLJ2oZn74yUz5x8NBGkVA==/109951164331219056.jpg" }
     });
-    const recommendList = [1,2,3,4,5,6,7,8,9,10].map(item=>{
+    const recommendList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(item => {
         return {
             id: 1,
             picUrl: "https://p1.music.126.net/fhmefjUfMD-8qtj3JKeHbA==/18999560928537533.jpg",
@@ -16,10 +18,14 @@ function Recommend(props){
         }
     })
     return (
-        <div>
-            <Slider bannerList={bannerList} />
-            <RecommendList recommendList={recommendList}  />
-        </div>
+        <Content>
+            <Scroll className='list'>
+                <div>
+                    <Slider bannerList={bannerList} />
+                    <RecommendList recommendList={recommendList} />
+                </div>
+            </Scroll>
+        </Content>
     )
 }
 
