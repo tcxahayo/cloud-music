@@ -1,9 +1,9 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
-import Home from '../application/Home';
-import Rank from '../application/Rank';
-import Recommend from '../application/Recommend';
-import Singers from '../application/Singers';
+import Home from '@/application/Home';
+import Rank from '@/application/Rank';
+import Recommend from '@/application/Recommend';
+import Singers from '@/application/Singers';
 
 /**
  * 配置页面路由

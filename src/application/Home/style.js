@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import style from '../../assets/global-style';
+import style from '@/assets/global-style';
 
 //顶部
 export const Top = styled.div`

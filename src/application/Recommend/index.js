@@ -1,6 +1,6 @@
 import React from 'react';
-import Slider from '../../components/slider';
-import RecommendList from '../../components/recommendList/index';
+import Slider from '@/components/slider';
+import RecommendList from '@/components/recommendList/index';
 
 function Recommend(props){
     //mock数据

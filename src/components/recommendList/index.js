@@ -1,6 +1,7 @@
 import React from 'react';
 import { ListWapper, List, ListItem } from './style';
-import { getCount } from '../../api/util';
+import { getCount }  from '@/api/util';
+
 
 function RecommendList(props) {
     return (

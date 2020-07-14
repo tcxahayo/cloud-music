@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { isEmpty } from '../../api/util';
+import { isEmpty } from '@/api/util';
 import Swiper from 'swiper';
 import "swiper/css/swiper.css";
 import { SliderContainer } from './style';

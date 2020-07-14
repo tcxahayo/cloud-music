@@ -2,7 +2,7 @@ root = true                         # 根目录的配置文件，编辑器会由
 
 [*]                                 # 匹配所有的文件
 indent_style = space                # 空格缩进
-indent_size = 2                     # 缩进空格为2个
+indent_size = 4                     # 缩进空格为2个
 end_of_line = lf                    # 文件换行符是 linux 的 `\n`
 charset = utf-8                     # 文件编码是 utf-8
 trim_trailing_whitespace = true     # 不保留行末的空格
