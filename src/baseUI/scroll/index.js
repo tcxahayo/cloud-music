@@ -42,8 +42,10 @@ const Scroll = forwardRef((props, ref) => {
     });
     //给实例绑定scroll事件
     useEffect(() => {
+        console.log('onSrcoll, onSrcoll', onSrcoll)
         if (!onSrcoll || !bScroll) return;
         bScroll.on('scroll', (scroll) => {
+            console.log('kkk')
             onSrcoll(scroll);
         })
         //销毁解绑
@@ -80,17 +82,17 @@ const Scroll = forwardRef((props, ref) => {
         }
     }, [pullDown, bScroll]);
     //使用自定义ref的时候，暴露给父组件的实例值
-    useImperativeHandle(ref, ()=>({
+    useImperativeHandle(ref, () => ({
         //暴露给外界的refresh的方法
-        refresh(){
-            if(bScroll){
+        refresh() {
+            if (bScroll) {
                 bScroll.refresh();
                 bScroll.scrollTo(0, 0);
             }
         },
         //暴露的getBScroll方法，提供bs实例
-        getBScroll(){
-            if(bScroll){
+        getBScroll() {
+            if (bScroll) {
                 return bScroll;
             }
         }
