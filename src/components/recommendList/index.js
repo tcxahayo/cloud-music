@@ -11,7 +11,7 @@ function RecommendList(props) {
                 {
                     props.recommendList.map((item, index) => {
                         return (
-                            <ListItem key={item.id + index}>
+                            <ListItem key={item.id}>
                                 <div className='img_wrapper'>
                                     <div className='decorate'></div>
                                     {/* 加此参数可以减小请求的图片资源大小 */}

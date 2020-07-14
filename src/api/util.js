@@ -3,7 +3,6 @@
  * @param {*} value 
  */
 export const isEmpty =(value)=>{
-    console.log(value)
     if(value === undefined || value === '' || value === null){
         return true
     }
